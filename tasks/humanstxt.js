@@ -9,9 +9,9 @@ module.exports = function (grunt) {
         // Read the current humans.txt
 		function readHumansTxt () {
 
-			var humanstxt = grunt.file.read(options.dest);
+			var humanstxt = grunt.file.read(options.src);
 
-			grunt.log.writeln('Read current humans.txt at '+ options.dest.toString().cyan + '.');
+			grunt.log.writeln('Read current humans.txt at '+ options.src.toString().cyan + '.');
 
 			updateHumansTxt(humanstxt);
 		}
@@ -35,13 +35,14 @@ module.exports = function (grunt) {
 
 			grunt.file.write(options.dest, humanstxt);
 
-			grunt.log.writeln('Humans.txt updated at '+ options.dest.toString().cyan + '.');
+			grunt.log.writeln('Wrote updated humans.txt to '+ options.dest.toString().cyan + '.');
 		}
 
 		// Merge task-specific and/or target-specific options with these defaults.
 		var	done	= this.async(),
 			options	= this.options({
-				dest: './humans.txt'
+				dest: './humans.txt',
+				src: './humans.txt'
 			});
 
 		readHumansTxt();
