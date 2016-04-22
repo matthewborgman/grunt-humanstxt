@@ -1,0 +1,37 @@
+{
+  "name": "grunt-humanstxt",
+  "version": "0.0.0",
+  "description": "Update the 'last updated' date in a humans.txt",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matthewborgman/grunt-humanstxt"
+  },
+  "author": {
+    "name": "Matthew Borgman",
+    "email": "matt.borgman@gmail.com",
+    "url": ""
+  },
+  "keywords": [
+    "humans.txt",
+    "humanstxt"
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-changelog": "github:matthewborgman/grunt-changelog#development",
+    "grunt-contrib-jshint": "~0.8.0",
+    "jshint-stylish": "~0.1.5",
+    "load-grunt-tasks": "~0.3.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "moment": "^2.10.6"
+  }
+}
